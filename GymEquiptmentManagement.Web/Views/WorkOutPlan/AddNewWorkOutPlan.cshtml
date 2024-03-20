@@ -1,0 +1,52 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+<script src="~/customscripts/workoutplan.js"></script>
+
+<form>
+
+    <div class="input-group mt-3">
+        <div class="input-group-prepend">
+            <span class="input-group-text"> <i class="bi bi-stickies"></i></span>
+        </div>
+        <input class="form-control" placeholder="Work Out Plan Name" id="txtWorkOutPlanName" required>
+    </div>
+
+    <div class="input-group mt-3">
+        <div class="input-group-prepend">
+            <span class="input-group-text"> <i class="bi bi-card-list"></i></span>
+        </div>
+        <input class="form-control" placeholder="Work Out Plan Description" id="txtWorkOutPlanDescription" required>
+    </div>
+
+    <div class="input-group mt-3">
+        <div class="input-group-prepend">
+            <label class="input-group-text"><i class="bi bi-soundwave"></i></label>
+        </div>
+        <select class="form-control select" id="selectAddWorkout" onchange="PopulateWorkout()" required>
+            <option value="0">Select Workout</option>
+            @{
+                foreach (var items in ViewBag.Workout)
+                {
+                    <option value="@items.Id">@items.WorkoutName</option>
+                }
+            }
+        </select>
+    </div>
+
+    <div class="input-group mt-3">
+        <div class="input-group-prepend">
+            <span class="input-group-text"> <i class="bi bi-cash-coin"></i></span>
+        </div>
+        <input type="number" class="form-control" placeholder="Price" id="txtPrice" required>
+    </div>
+
+</form>
+
+    <div class="mt-3" style="float:right">
+        <button class="btn btn-success" onclick="InsertWorkOutPlan()">Save</button>
+        <button class="btn btn-secondary ml-2" onclick="changePath('/workoutplan')">Cancel</button>
+    </div>
+

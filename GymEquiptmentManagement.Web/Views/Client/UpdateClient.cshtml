@@ -1,0 +1,93 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+<script src="~/customscripts/client.js"></script>
+
+<form>
+
+    <div class="input-group">
+        <label>User Name</label>
+        <div class="input-group">
+            <div class="input-group-prepend">
+                <span class="input-group-text"> <i class="bi bi-envelope-at"></i></span>
+            </div>
+            <input type="email" class="form-control" placeholder="Email / Username" id="updateClientEmailAddress" required>
+        </div>
+    </div>
+
+    <div class="input-group mt-2">
+        <label>Password</label>
+        <div class="input-group">
+            <div class="input-group-prepend">
+                <span class="input-group-text"> <i class="bi bi-key-fill"></i></span>
+            </div>
+            <input type="password" class="form-control" placeholder="Password" id="updateClientPassword" required>
+        </div>
+    </div>
+
+    <div class="input-group mt-2">
+        <label>First Name</label>
+        <div class="input-group">
+            <div class="input-group-prepend">
+                <span class="input-group-text"> <i class="bi bi-person-vcard"></i></span>
+            </div>
+            <input class="form-control" placeholder="Fist Name" id="updateClientFirstName" required>
+        </div>
+    </div>
+
+    <div class="input-group mt-2">
+        <label>Last Name</label>
+        <div class="input-group">
+            <div class="input-group-prepend">
+                <span class="input-group-text"> <i class="bi bi-person-vcard"></i></span>
+            </div>
+            <input class="form-control" placeholder="Last Name" id="updateClientLastName" required>
+        </div>
+
+    </div>
+
+    <div class="input-group mt-2">
+        <label>Birth Date</label>
+        <div class="input-group">
+            <div class="input-group-prepend">
+                <span class="input-group-text"> <i class="bi bi-calendar-plus"></i> </span>
+            </div>
+            <input id="updateClientBirthdate" type="date" class="form-control" required>
+        </div>
+    </div>
+
+    <div class="input-group mt-2">
+        <label>Gender</label>
+        <div class="input-group">
+            <div class="input-group-prepend">
+                <label class="input-group-text"><i class="bi bi-gender-ambiguous"></i></label>
+            </div>
+            <select class="form-control select" id="updateClientGender" required>
+            <option value="M">Male</option>
+            <option value="F">Female</option>
+            <option>Fish</option>
+            <option>Bird</option>
+            </select>
+        </div>
+    </div>
+
+    <div class="input-group mt-2">
+        <label>User Type</label>
+        <div class="input-group">
+            <div class="input-group-prepend">
+            <label class="input-group-text"><i class="bi bi-person-workspace"></i></label>
+            </div>
+        <select class="form-control select" id="updateClientUserType" required>
+            <option value="A">Admin</option>
+            <option value="C">Client</option>
+        </select>
+        </div>
+    </div>
+</form>
+
+    <div class="mt-3" style="float:right">
+        <button class="btn btn-success" onclick="UpdateClientData()">Save</button>
+        <button class="btn btn-secondary ml-2" onclick="changePath('/Client/')">Cancel</button>
+    </div>

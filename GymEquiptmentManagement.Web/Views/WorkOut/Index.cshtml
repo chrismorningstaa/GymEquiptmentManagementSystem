@@ -1,0 +1,26 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+<script src="~/customscripts/workout.js"></script>
+
+<h2>Workout</h2>
+
+<div class="table-responsive">
+    <div class="d-flex justify-content-between" style="float:right;">
+        <button class="btn btn-primary m-2" onclick="changePath('/workout/AddNewWorkOut')">Add New Workout</button>
+    </div>
+    <table id="workout-table" class="table table-bordered table-hover">
+        <thead>
+            <tr>
+                <th>WorkOut Name</th>
+                <th>Description</th>
+                <th>Date Added</th>
+                <th width="20%"></th>
+            </tr>
+        </thead>
+        <tbody>
+        </tbody>
+    </table>
+</div>
